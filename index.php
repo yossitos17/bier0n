@@ -26,7 +26,15 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     </head>
     <body>
         <?php
-        // put your code here
+         // Incluir funciones.php y control.php
+        include_once 'funciones.php';
+        include_once 'control.php';
+        
+        // Inicia la sesión.
+        session_start();
+        
+        // La cabecera.
+        cabecera(); 
         ?>
     </body>
 </html>
