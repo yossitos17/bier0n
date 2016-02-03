@@ -12,4 +12,6 @@ define("Registrado", 50);
     }else{
         echo "</div>";
     }
-}
+
+
+?>
