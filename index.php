@@ -26,7 +26,8 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
     </head>
     <body>
         <?php
-         // Incluir funciones.php y control.php
+        
+        // Incluir funciones.php y control.php
         include_once 'funciones.php';
         include_once 'control.php';
         
@@ -34,7 +35,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         session_start();
         
         // La cabecera.
-        cabecera(); 
+        //cabecera(); 
+        cuadroLogin();
         ?>
+        
+        <div class='col-12 cabecera'>
+           Bier0n | Élite del Etilismo
+        </div>
+        
+       
     </body>
 </html>
