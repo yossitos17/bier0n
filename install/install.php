@@ -31,14 +31,13 @@ and open the template in the editor.
 
                  //1 Consulta SQL que crea la tabla de usuarios.
                 $sql = "CREATE TABLE if not exists usuarios (
-                idusuarios INT(15) NOT NULL AUTO_INCREMENT,
                 login VARCHAR(20) NOT NULL,
                 password VARCHAR(300) NOT NULL,
                 edad INT(2) NOT NULL,
                 sexo SET('Hombre','Mujer') NOT NULL,
                 rol SET('Administrador','Registrado') NOT NULL default 'Registrado',
-                PRIMARY KEY (idusuarios)
-            )  ENGINE=InnoDB;";
+                PRIMARY KEY (login)
+            )   ENGINE=InnoDB;";
                 mysqli_query($conex, $sql) or die("Error al crear la tabla usuarios.".mysqli_error($conex));
                 
                 echo "OK.<br>Creando la tabla 'cervezas'...";
@@ -79,13 +78,13 @@ and open the template in the editor.
                    //4 Consulta SQL que crea la tabla de valoración.
                 $sql = "CREATE TABLE if not exists valoración (
                 idcervezas INT(20) NOT NULL,
-                idusuarios INT(15) NOT NULL,
+                login VARCHAR(20) NOT NULL,
                 puntuación INT(2) NOT NULL,
                 comentario VARCHAR(350) NOT NULL,
                 fechasubida TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (idcervezas) REFERENCES cervezas(idcervezas),
-                FOREIGN KEY (idusuarios) REFERENCES usuarios(idusuarios),
-                PRIMARY KEY (idcervezas, idusuarios)
+                FOREIGN KEY (login) REFERENCES usuarios(login),
+                PRIMARY KEY (idcervezas, login)
                   )  ENGINE=InnoDB;";    
                 mysqli_query($conex, $sql) or die("Error al crear la tabla valoración.".mysqli_error($conex));
                

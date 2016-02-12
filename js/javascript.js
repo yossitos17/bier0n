@@ -1,7 +1,7 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+
+var frases = new Array('Frase 1','Frase 2','Frase 3','Frase 4','Frase 5','Frase 6');
+function cambiaFrase(){
+document.getElementById('frase').innerHTML=frases[parseInt(Math.random() * frases.length)];
+}
 

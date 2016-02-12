@@ -25,7 +25,7 @@ if(isset($_POST['registrar'])){
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/estilos.css" type="text/css"/> 
-    <script type="text/javascript" src="./js/javascript.js?1"></script>
+    <script type="text/javascript" src="./js/javascript.js"></script>
     <title>Registro</title>
   </head>
   <body>
@@ -34,23 +34,27 @@ if(isset($_POST['registrar'])){
            Bier0n | Élite del Etilismo
         </div>
       
-      <div class="col-7 formuRegistro">
+      <div class="col-5 formuRegistro">
           <h3>Regístrate y no protestes</h3>
           <form name="registro_form" id="formularioRegistro" method="POST" action="" onsubmit="return registro();">
             <input type="text" name="login" placeholder="Correo Electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/> Ej: bacalao@contomate.com<br>
             <input type="password" name="password" placeholder="Contraseña" required/><br><br/>
-             <input type="radio" name="gender" value="Hombre" checked>Shurmano<br>
-             <input type="radio" name="gender" value="Mujer">Shurmana<br><br/>
+             <input type="radio" name="sexo" value="Hombre" checked>Shurmano<br>
+             <input type="radio" name="sexo" value="Mujer">Shurmana<br><br/>
             <label for="so2">¿Cuántos años tienes?</label> <br/><br/>
-            <select id="edad" name="edad" size="7">
-            <option value="edad1821" selected="selected">18-21</option>
-            <option value="edad2225">22-25</option>
-            <option value="edad2630">26-30</option>
-            <option value="edad3135">31-35</option>
-            <option value="edad3645">36-45</option>
-            <option value="edad4660">46-60</option>
-            <option value="caminoalatumba">viejales</option>
-            </select>
+            <input type="radio" name="edad" value="020" checked> 18-21
+                <br>
+            <input type="radio" name="edad" value="2226"> 22-26
+                <br>
+            <input type="radio" name="edad" value="2735"> 27-35
+                <br>
+            <input type="radio" name="edad" value="3645"> 36-45
+                <br>
+            <input type="radio" name="edad" value="4659"> 46-59
+                <br>
+            <input type="radio" name="edad" value="60"> +60
+                <br>
+                <br>
             <br /><br/>
             <input type="submit" name="registrar" value="Registrarse" />
           </form>

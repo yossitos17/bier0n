@@ -33,14 +33,10 @@ if(isset($_POST['autenticar'])){
      
         //Fijamos las credenciales de sesión.
         $_SESSION['autenticado'] = TRUE;
-        $_SESSION['usuario'] = $_POST['login'];
-        $_SESSION['id'] = $fila['id'];
+        $_SESSION['login'] = $_POST['login'];
         $_SESSION['rol'] = $fila['rol'];
-        $_SESSION['email'] = $fila['email'];
-        $_SESSION['sexo'] = $fila['sexo'];
-        $_SESSION['edad'] = $fila['edad'];
-     
-    
+        
+        
         // Devolvemos al usuario a la página de inicio.
        header("Location: index.php");
     }else{
