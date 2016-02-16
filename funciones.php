@@ -39,6 +39,6 @@ function muestraError(){
 }
 
 function cabecera(){
-    echo "Bier0n | <div style='display: span' id='frase'> </div>";
+    echo "<div id='frase'> </div>";
 }
 ?>

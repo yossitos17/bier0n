@@ -25,6 +25,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         <script type="text/javascript" src="./js/javascript.js"></script>
     </head>
     <body onload='cambiaFrase();'>
+        
         <?php
         
         // Incluir funciones.php y control.php
@@ -44,7 +45,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         <div class='col-12 cabecera'>
           <?php cabecera(); ?>
         </div>
-        
+        <hr />
        
     </body>
 </html>

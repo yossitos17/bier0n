@@ -1,4 +1,6 @@
 <?php
+include_once 'funciones.php';
+
 if(isset($_POST['registrar'])){
         include_once 'config/config.php';
         include_once 'funciones.php';
@@ -28,10 +30,12 @@ if(isset($_POST['registrar'])){
     <script type="text/javascript" src="./js/javascript.js"></script>
     <title>Registro</title>
   </head>
-  <body>
-    
+  <body onload='cambiaFrase();'>
+      
+    <?php include_once 'funciones.php'; ?>
+      
       <div class='col-12 cabecera'>
-           Bier0n | Élite del Etilismo
+           <?php cabecera(); ?>
         </div>
       
       <div class="col-5 formuRegistro">

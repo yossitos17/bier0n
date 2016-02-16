@@ -32,13 +32,15 @@ and open the template in the editor.
 }
 
 @font-face {
-  font-family: Riogrande;
-  src: url(../fuentes/Riogrande.ttf)
+  font-family: docktrin;
+  src: url(../fuentes/docktrin.ttf)
 }
 
 .cabecera{
-    font-family: 'RioGrande';
+    font-family: 'docktrin';
     font-size: 2em;
+    display: block;
+    
     
 }
 
@@ -62,5 +64,6 @@ body{
     position: absolute;
     right: 4%;
     top: 3%;
+    margin-top: 5%;
     
 }
