@@ -7,15 +7,27 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="../css/estilos.css" type="text/css"/> 
+        <link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
+        <script type="text/javascript" src="./js/javascript.js"></script>
         <title>Instalación</title>
     </head>
-    <body>
+    <?php
+        include_once '../config/config.php';
+        include_once '../funciones.php';  
+    ?>
+            
+    <body onload='cambiaFrase()'';>
+        
+         <div class='col-12 cabecera'>
+                
+          <?php cabecera(); ?>
+        
+        </div>
+        
+        
         <?php
          
-            include_once '../config/config.php';
-            include_once '../funciones.php';
-            
+      
             
             // Conecta con la BBDD
             echo "Conectando con el sistema gestor de bases de datos... ";
@@ -31,11 +43,11 @@ and open the template in the editor.
 
                  //1 Consulta SQL que crea la tabla de usuarios.
                 $sql = "CREATE TABLE if not exists usuarios (
-                login VARCHAR(20) NOT NULL,
+                login VARCHAR(30) NOT NULL,
                 password VARCHAR(300) NOT NULL,
                 edad INT(2) NOT NULL,
                 sexo SET('Hombre','Mujer') NOT NULL,
-                rol SET('Administrador','Registrado') NOT NULL default 'Registrado',
+                rol SET('Administrador','Registrado') default 'Registrado',
                 PRIMARY KEY (login)
             )   ENGINE=InnoDB;";
                 mysqli_query($conex, $sql) or die("Error al crear la tabla usuarios.".mysqli_error($conex));
@@ -102,7 +114,14 @@ and open the template in the editor.
                   )  ENGINE=InnoDB;";    
                 mysqli_query($conex, $sql) or die("Error al crear la tabla cervezasestablecimientos.".mysqli_error($conex));
                
-                echo "OK.<br>`SUCCES´  ";
+                
+                echo "OK.<br> Creando Administrador:";
+                $sql = "INSERT INTO usuarios (login, password, edad, sexo, rol) VALUES ('Administrador@admin.com', 'Usuario1', '50', 'Hombre', 'Administrador');";
+
+                mysql_query($conex, $sql) or die("No se pudo crear Administrador.");
+                echo "Administrador Creado."; 
+                
+                echo "OK.<br>Aplicación Instalada, Enjoy!  ";
                 
                  
         ?>
