@@ -32,13 +32,14 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         include_once 'funciones.php';
         include_once 'control.php';
         
-        // Inicia la sesión.
+        // Inicia la sesión (en funciones.php)
         session_start();
         
-        // El Login.
-        
+        // El Login (en funciones.php)
         cuadroLogin();
         ?>
+        
+        <a href="autenticado/cerrar.php"> Cerrar Sesión </a>
         
         <!--Llamada a la cabecera-->
         

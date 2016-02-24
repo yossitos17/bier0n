@@ -63,7 +63,7 @@ and open the template in the editor.
                 nombre VARCHAR(30) NOT NULL,
                 modelo VARCHAR (40) NOT NULL,
                 graduacion INT(3) NOT NULL,
-                imagen VARCHAR(2) NOT NULL,
+                imagen VARCHAR(200) NOT NULL,
                  PRIMARY KEY (idcervezas)
                )  ENGINE=InnoDB;";    
                mysqli_query($conex, $sql) or die("Error al crear la tabla cervezas.".mysqli_error($conex));
@@ -116,9 +116,9 @@ and open the template in the editor.
                
                 
                 echo "OK.<br> Creando Administrador:";
-                $sql = "INSERT INTO usuarios (login, password, edad, sexo, rol) VALUES ('Administrador@admin.com', 'Usuario1', '50', 'Hombre', 'Administrador');";
+                $sql = "INSERT INTO usuarios (login, password, edad, sexo, rol) VALUES ('Administrador@admin.com', password('Usuario1'), '50', 'Hombre', 'Administrador');";
 
-                mysql_query($conex, $sql) or die("No se pudo crear Administrador.");
+                mysqli_query($conex, $sql) or die("No se pudo crear Administrador.");
                 echo "Administrador Creado."; 
                 
                 echo "OK.<br>Aplicación Instalada, Enjoy!  ";

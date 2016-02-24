@@ -3,8 +3,8 @@
 // Paso de los roles a valor numérico para facilitar
 // las funciones de seguridad.
 
-define("Administrador", 100);
-define("Registrado", 50);
+define("Administrador", "Administrador");
+define("Registrado", "Registrado");
 
     // Muestra el mensaje de bienvenida si la sesión está iniciada.
     //if(isset($_SESSION['autenticado'])){
@@ -27,6 +27,7 @@ function cuadroLogin(){
                     <p>¿No estás registrado? <a href='Registro.php'>Regístrate ahora, ¡infraser!.</a></p>
                 </form>
             </div>";
+        
     }
 }
 
@@ -40,5 +41,24 @@ function muestraError(){
 
 function cabecera(){
     echo "<div id='frase'> </div>";
+}
+
+
+// Comprueba el rol del usuario para que no entre donde no debe.
+function seguridad($rol){
+  session_start();
+  if(isset($_SESSION['autenticado'])){
+    if(!($_SESSION['rol'] == $rol || $_SESSION['rol'] == "Administrador")){
+      header("Location: index.php?error=No tienes permiso");
+      exit();
+    }
+   
+    
+  }else{
+      
+      session_destroy();
+      header("Location: index.php?error=No estás autenticado.");
+      exit();
+  }
 }
 ?>

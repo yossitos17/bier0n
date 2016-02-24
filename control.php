@@ -5,7 +5,7 @@
  */
 // Verificamos que venimos del formulario de autenticación.
 if(isset($_POST['autenticar'])){ 
-    include_once 'conf/config.php';
+    include_once 'config/config.php';
 
     // Conexión con la base de datos.
     $conexion= mysqli_connect($host, $user, $password, $database, $port) or die("<br>Error"
@@ -38,7 +38,8 @@ if(isset($_POST['autenticar'])){
         
         
         // Devolvemos al usuario a la página de inicio.
-       header("Location: index.php");
+       header("Location: autenticado/perfil.php");
+       
     }else{
     
         // Si el login es incorrecto, devuelve a la página
