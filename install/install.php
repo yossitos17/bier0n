@@ -119,9 +119,9 @@ and open the template in the editor.
                 $sql = "INSERT INTO usuarios (login, password, edad, sexo, rol) VALUES ('Administrador@admin.com', password('Usuario1'), '50', 'Hombre', 'Administrador');";
 
                 mysqli_query($conex, $sql) or die("No se pudo crear Administrador.");
-                echo "Administrador Creado."; 
+                echo "Administrador creado como | Usuario:Administrador@admin.com | Pass:Usuario1 "; 
                 
-                echo "OK.<br>Aplicación Instalada, Enjoy!  ";
+                echo "OK.<br>Aplicación Instalada, Enjoy! No se te olvide borrar el instalador vayamos a tonterías ";
                 
                  
         ?>

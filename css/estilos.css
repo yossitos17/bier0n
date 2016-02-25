@@ -67,3 +67,31 @@ body{
     margin-top: 5%;
     
 }
+
+.formuCervezas{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    border: solid 2px;
+    border-radius: 4px;
+    position: relative;
+    right: 4%;
+    top: 3%;
+    margin-top: 5%;
+ 
+}
+
+.cerveTitulo{
+    font-family: 'docktrin';
+}
+.formuEstablecimientos{
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    border: solid 2px;
+    border-radius: 4px;
+    position: relative;
+    right: 40;
+    top: 3%;
+    margin-top: 5%;
+ 
+}
+.estableciTitulo{
+    font-family: 'docktrin';
+}

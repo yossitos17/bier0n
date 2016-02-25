@@ -48,15 +48,15 @@ if(isset($_POST['registrar'])){
             <label for="so2">¿Cuántos años tienes?</label> <br/><br/>
             <input type="radio" name="edad" value="020" checked> 18-21
                 <br>
-            <input type="radio" name="edad" value="2226"> 22-26
+            <input type="radio" name="edad" value="22-26"> 22-26
                 <br>
-            <input type="radio" name="edad" value="2735"> 27-35
+            <input type="radio" name="edad" value="27-35"> 27-35
                 <br>
-            <input type="radio" name="edad" value="3645"> 36-45
+            <input type="radio" name="edad" value="36-45"> 36-45
                 <br>
-            <input type="radio" name="edad" value="4659"> 46-59
+            <input type="radio" name="edad" value="46-59"> 46-59
                 <br>
-            <input type="radio" name="edad" value="60"> +60
+            <input type="radio" name="edad" value="60+"> +60
                 <br>
                 <br>
             <br /><br/>
