@@ -31,28 +31,20 @@
        
         <div class="col-3 formuCervezas">
             <div class="cerveTitulo">
-               Vamos a ver, ¿Qué birra es?
+               Vamos a ver, ¿Qué birra es y donde la pillas?
             </div>
            <hr/>
-        <form name='formuCervezas' id='formuCervezas' method='post' action='control.php'>
+        <form name='formuCervezas' id='formuCervezas' method='post' action='enviaBirra.php'>
                     <input type='text' name='nombrecerveza' placeholder='Nombre' required /><br>
                     <input type='text' name='modelo' placeholder='Modelo' required /><br>
                     <input type='text' name='graduacion' placeholder='Graduación' required /><br>
-                    <input type='text' name='modelo' placeholder='Modelo' required /><br>
-                    
-        </form>
-        </div>
-        
-         <div class="col-3 formuEstablecimientos">
-            <div class="estableciTitulo">
-                Y ahora, ¿Dónde se puede conseguir?
-            </div>
-           <hr/>
-        <form name='formuCervezas' id='formuCervezas' method='post' action='control.php'>
+                    <input type='text' name='imagen' placeholder='Imagen' required /><br>
+                    <hr />
                     <input type='text' name='direccion' placeholder='Dirección' required /><br>
                     <input type='text' name='ciudad' placeholder='Ciudad' required /><br>
                     <input type='text' name='precio' placeholder='Precio' required /><br>
-                    <input type='text' name='local' placeholder='Nombre del establecimiento' required /><br>         
+                    <input type='text' name='local' placeholder='Nombre del establecimiento' required /><br>
+                    <input type='submit' value='Enviar' name='enviaBirra' />
         </form>
         </div>
     </body>

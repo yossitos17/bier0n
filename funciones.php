@@ -26,9 +26,11 @@ function cuadroLogin(){
                     <input type='submit' name='autenticar' value='Iniciar sesión' onclick='inicioSesion(this);' /><br>
                     <p>¿No estás registrado? <a href='Registro.php'>Regístrate ahora, ¡infraser!.</a></p>
                 </form>
-            </div>";
-        
+            </div>";  
+    }else{
+         echo "<a class='col-2 cerrar' href='autenticado/cerrar.php'> Cerrar Sesión </a>";
     }
+    
 }
 
 

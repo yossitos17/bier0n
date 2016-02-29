@@ -94,3 +94,11 @@ body{
 .estableciTitulo{
     font-family: 'docktrin';
 }
+
+.cerrar {
+    font-family: 'docktrin';
+    float: initial;
+    margin-top: 5%;
+    font-size: 1.5em;
+    
+}

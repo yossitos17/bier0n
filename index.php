@@ -39,14 +39,12 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
         cuadroLogin();
         ?>
         
-        <a href="autenticado/cerrar.php"> Cerrar Sesión </a>
-        
         <!--Llamada a la cabecera-->
         
         <div class='col-12 cabecera'>
           <?php cabecera(); ?>
         </div>
         <hr />
-       
+        
     </body>
 </html>
