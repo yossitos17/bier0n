@@ -38,57 +38,56 @@ and open the template in the editor.
 
 .cabecera{
     font-family: 'docktrin';
-    font-size: 2em;
+    font-size: 3em;
     display: block;
     
     
 }
-
-.formuLogin{
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    border: solid 2px;
-    border-radius: 4px;
-    position: absolute;
-    right: 5%;
-    top: 5%;
-}
-
 body{
     background-image: url('../images/beer-pattern2.jpg');
 }
 
-.formuRegistro{
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    border: solid 2px;
-    border-radius: 4px;
+.formuLogin{
+    font-size: 1.5em;
+    font-family: 'docktrin';
+    border: solid 4px;
+    border-radius: 15px;
     position: absolute;
-    right: 4%;
-    top: 3%;
-    margin-top: 5%;
-    
+    right: 5%;
+    top: 15%;
+}
+
+
+
+.formuRegistro{
+    font-size: 1.5em;
+    font-family: 'docktrin';
+    border: solid 4px;
+    border-radius: 15px;
+    position: absolute;
+    right: 10%;
+    top: 15%; 
 }
 
 .formuCervezas{
+    font-size: 1.5em;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    border: solid 2px;
-    border-radius: 4px;
-    position: relative;
-    right: 4%;
-    top: 3%;
+    border: solid 4px;
+    border-radius: 15px;
+    float: left;
     margin-top: 5%;
- 
+    
 }
 
 .cerveTitulo{
     font-family: 'docktrin';
 }
 .formuEstablecimientos{
+    font-size: 1.5em;
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    border: solid 2px;
-    border-radius: 4px;
-    position: relative;
-    right: 40;
-    top: 3%;
+    border: solid 4px;
+    border-radius: 15px;
+    float: right;
     margin-top: 5%;
  
 }

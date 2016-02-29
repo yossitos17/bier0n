@@ -19,7 +19,7 @@ define("Registrado", "Registrado");
 function cuadroLogin(){
     if(!isset($_SESSION['autenticado'])){
         echo "<div class='col-2 formuLogin'>
-              <h4>Inicia sesión</h4>
+              Inicia sesión
                 <form name='iniciaSesion' id='formularioSesion' method='post' action='control.php'>
                     <input type='text' name='login' placeholder='Usuario' required /><br>
                     <input type='password' name='password' placeholder='Contraseña' required /><br>

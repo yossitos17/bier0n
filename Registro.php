@@ -37,9 +37,9 @@ if(isset($_POST['registrar'])){
       <div class='col-12 cabecera'>
            <?php cabecera(); ?>
         </div>
-      
+      <hr />
       <div class="col-5 formuRegistro">
-          <h3>Regístrate y no protestes</h3>
+          Regístrate y no protestes
           <form name="registro_form" id="formularioRegistro" method="POST" action="" onsubmit="return registro();">
             <input type="text" name="login" placeholder="Correo Electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/> Ej: bacalao@contomate.com<br>
             <input type="password" name="password" placeholder="Contraseña" required/><br><br/>

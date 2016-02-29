@@ -29,7 +29,7 @@
         </div>
         <hr />
        
-        <div class="col-5 formuCervezas">
+        <div class="col-3 formuCervezas">
             <div class="cerveTitulo">
                Vamos a ver, ¿Qué birra es?
             </div>
@@ -38,13 +38,12 @@
                     <input type='text' name='nombrecerveza' placeholder='Nombre' required /><br>
                     <input type='text' name='modelo' placeholder='Modelo' required /><br>
                     <input type='text' name='graduacion' placeholder='Graduación' required /><br>
-                    <input type='text' name='modelo' placeholder='modelo' required /><br>
-                    <input type='image' name='imagen' placeholder='imagen' required /><br>
+                    <input type='text' name='modelo' placeholder='Modelo' required /><br>
                     
         </form>
         </div>
         
-         <div class="col-5 formuEstablecimientos">
+         <div class="col-3 formuEstablecimientos">
             <div class="estableciTitulo">
                 Y ahora, ¿Dónde se puede conseguir?
             </div>

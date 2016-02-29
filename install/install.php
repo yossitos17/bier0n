@@ -63,7 +63,7 @@ and open the template in the editor.
                 nombre VARCHAR(30) NOT NULL,
                 modelo VARCHAR (40) NOT NULL,
                 graduacion INT(3) NOT NULL,
-                imagen VARCHAR(200) NOT NULL,
+                imagen VARCHAR(300) NOT NULL,
                  PRIMARY KEY (idcervezas)
                )  ENGINE=InnoDB;";    
                mysqli_query($conex, $sql) or die("Error al crear la tabla cervezas.".mysqli_error($conex));
@@ -92,7 +92,7 @@ and open the template in the editor.
                 idcervezas INT(20) NOT NULL,
                 login VARCHAR(20) NOT NULL,
                 puntuación INT(2) NOT NULL,
-                comentario VARCHAR(350) NOT NULL,
+                comentario VARCHAR(1000) NOT NULL,
                 fechasubida TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (idcervezas) REFERENCES cervezas(idcervezas),
                 FOREIGN KEY (login) REFERENCES usuarios(login),
