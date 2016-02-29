@@ -25,9 +25,16 @@
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas");
              
 
-
-             $sql="insert into establecimientos (direccion, ciudad, precio, local) values ('$direccion','$ciudad','$precio','$local');";
-             mysli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");             
+             // Aquí habías puesto LOCAL en lugar de NOMBREESTABLECIMIENTO.
+             // Deberías cambiarle el nombre a DIRECCIÓN por DIRECCION sin tilde
+             // para evitar problemas.
+             $sql="insert into establecimientos (dirección, ciudad, precio, nombreestablecimiento) "
+                     . "values ('$direccion','$ciudad','$precio','$local');";
+             mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");
+             
+             echo "éxito";
+             
+             header("Location: perfil.php");
         }
         
         
