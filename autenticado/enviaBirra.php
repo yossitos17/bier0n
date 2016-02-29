@@ -5,7 +5,7 @@
         include_once '../control.php';
         include_once '../config/config.php';
         
-        seguridad('autenticado');
+        seguridad('Registrado');
         
         if(isset($_POST['enviaBirra'])){
              $conexion = mysqli_connect($host, $user, $password, $database, $port) 
