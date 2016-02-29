@@ -5,7 +5,7 @@
         include_once '../control.php';
         include_once '../config/config.php';
         
-        seguridad('Registrado');
+        seguridad('Registrado'); 
         
         if(isset($_POST['enviaBirra'])){
              $conexion = mysqli_connect($host, $user, $password, $database, $port) 
@@ -21,7 +21,7 @@
              $precio=$_POST['precio'];
              $local=$_POST['local'];
              
-             $sql="insert into cervezas (nombre, modelo, graduacion; imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
+             $sql="insert into cervezas (nombre, modelo, graduacion, imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas");
              
 
