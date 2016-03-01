@@ -20,6 +20,8 @@
              $ciudad=$_POST['ciudad'];
              $precio=$_POST['precio'];
              $local=$_POST['local'];
+             $puntuacion=$_POST['puntuacion'];
+             $comentario=$_POST['comentario'];
              
              $sql="insert into cervezas (nombre, modelo, graduacion, imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas");
@@ -30,9 +32,13 @@
                      . "values ('$direccion','$ciudad','$precio','$local');";
              mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");
              
-             echo "éxito";
+            
              
-             header("Location: perfil.php");
+             $sql="insert into valoracion (puntuacion, comentario) values ('$puntuacion','$comentario');";
+             mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a Valoración");
+             
+             
+             header("Location: /perfil.php");
         }
         
         ?>

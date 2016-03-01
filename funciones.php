@@ -27,8 +27,6 @@ function cuadroLogin(){
                     <p>¿No estás registrado? <a href='Registro.php'>Regístrate ahora, ¡infraser!.</a></p>
                 </form>
             </div>";  
-    }else{
-         echo "<a class='col-2 cerrar' href='autenticado/cerrar.php'> Cerrar Sesión </a>";
     }
     
 }

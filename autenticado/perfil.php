@@ -28,6 +28,19 @@
           <?php cabecera(); ?>
         </div>
         <hr />
+        
+        <!— Menú —>
+            <div class="col-12 menu">
+                <ul>
+                    <li><a href='../index.php'>Inicio</a></li>
+                    <li><a href='/perfil.php'>Mi Perfil</a></li>
+                    <li><a href='autenticado/misBirras.php'>Birras Subidas</a></li>
+                    <li><a href="about.php">Sobre bier0n</a></li>
+                    <li><a href="contacto.php">Contacto</a></li>
+                    <li><a href="topTen.php">Todas las cervezas</a></li>
+                    <li><a href="/cerrar.php">Cerrar sesión</a></li>
+                </ul>
+            </div>
        
         <div class="col-3 formuCervezas">
             <div class="cerveTitulo">
@@ -45,21 +58,12 @@
                     <input type='text' name='ciudad' placeholder='Ciudad' required />Ciudad<br>
                     <input type='text' name='precio' placeholder='Precio' required />Di lo que vale<br>
                     <br>
-                    <input type='submit' value='Enviar' name='enviaBirra' />
-        </form>
-        </div>
-        
-         <div class="col-3 formuValora">
-            <div class="valoraTitulo">
-               Coméntala y Valórala
-            </div>
-           <hr/>
-        <form name='formuValora' id='formuValora' method='post' action='enviaValora.php'>
                     <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Pon la marca<br>
-                    <input type='text' name='comentario' placeholder='Comenta aquí' required />Di el modelo<br>
-                    <input type='submit' value='Enviar' name='enviaValora' />
+                    <textarea name="comentario" placeholder="Comenta aquí tu vaina" rows="15" cols="30"></textarea>
+                    <input type='submit' value='Enviar' name='enviaBorra' />
         </form>
         </div>
+       
         
     </body>
 </html>

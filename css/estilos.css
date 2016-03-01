@@ -112,3 +112,64 @@ body{
     font-size: 1.5em;
     
 }
+
+/* Aquí va todo el menú para moverse*/
+
+.menu{
+    font-family: 'Open Sans', sans-serif;
+    background: #424242;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    align-content: center;
+}
+.menu > ul {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.menu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.menu > ul > li{
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.menu > ul > li > a{
+    padding: 20px;
+    color: white;
+    font-size: .9em;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: color .2s ease;
+    -moz-transition: color .2s ease;
+    -ms-transition: color .2s ease;
+    -o-transition: color .2s ease;
+    transition: color .2s ease;
+}
+.menu > ul > li:hover > a,
+.menu > ul > li.active > a{
+  color: #009ae1;
+  background-color: white;
+  transition: color .2s ease;
+}
