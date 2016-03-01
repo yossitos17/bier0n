@@ -54,13 +54,13 @@
                     <input type='text' name='imagen' placeholder='Imagen' required />¡Ilústranos!<br>
                     <hr />
                     <input type='text' name='direccion' placeholder='Dirección' required />Pon la dirección<br>
-                    <input type='text' name='local' placeholder='Nombre del establecimiento' required />¿Aca donde?<br>
+                    <input type='text' name='local' placeholder='Nombre del establecimiento' required />Tienda<br>
                     <input type='text' name='ciudad' placeholder='Ciudad' required />Ciudad<br>
                     <input type='text' name='precio' placeholder='Precio' required />Di lo que vale<br>
                     <br>
                     <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Pon la marca<br>
                     <textarea name="comentario" placeholder="Comenta aquí tu vaina" rows="15" cols="30"></textarea>
-                    <input type='submit' value='Enviar' name='enviaBorra' />
+                    <input type='submit' value='Enviar' name='enviaBirra' />
         </form>
         </div>
        

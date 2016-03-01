@@ -36,6 +36,7 @@ Copyright (C) 2016  Piticlis Productions.
             
             <?php
             
+           //Selecciona de cada tabla lo que necesito y luego se manda en forma de tabla creando variables con $
             $sqlCervezas="select * from cervezas limit 10;";
             $resultadoCervezas=mysqli_query($conexion, $sqlcervezas);
             $sqlEstablecimientos="select * from establecimientos limit 10;";

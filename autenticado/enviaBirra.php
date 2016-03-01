@@ -24,18 +24,18 @@
              $comentario=$_POST['comentario'];
              
              $sql="insert into cervezas (nombre, modelo, graduacion, imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
-             mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas");
+             mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas".  mysqli_error($conexion));
    
              
              
-             $sql="insert into establecimientos (dirección, ciudad, precio, nombreestablecimiento) "
-                     . "values ('$direccion','$ciudad','$precio','$local');";
-             mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");
+             $sql="insert into establecimientos (direccion, ciudad, precio, nombreestablecimiento) "
+                     . "values ('$direccion','$local','$ciudad','$precio');";
+             mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos".  mysqli_error($conexion));
              
             
              
              $sql="insert into valoracion (puntuacion, comentario) values ('$puntuacion','$comentario');";
-             mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a Valoración");
+             mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a Valoración".  mysqli_error($conexion));
              
              
              header("Location: /perfil.php");
