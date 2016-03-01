@@ -57,7 +57,7 @@
         <form name='formuValora' id='formuValora' method='post' action='enviaValora.php'>
                     <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Pon la marca<br>
                     <input type='text' name='comentario' placeholder='Comenta aquí' required />Di el modelo<br>
-                    <input type='submit' value='Enviar' name='enviaBirra' />
+                    <input type='submit' value='Enviar' name='enviaValora' />
         </form>
         </div>
         
