@@ -30,4 +30,4 @@
              mysli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");             
         }
         
-        
+        ?>

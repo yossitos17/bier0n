@@ -35,17 +35,31 @@
             </div>
            <hr/>
         <form name='formuCervezas' id='formuCervezas' method='post' action='enviaBirra.php'>
-                    <input type='text' name='nombrecerveza' placeholder='Nombre' required /><br>
-                    <input type='text' name='modelo' placeholder='Modelo' required /><br>
-                    <input type='text' name='graduacion' placeholder='Graduación' required /><br>
-                    <input type='text' name='imagen' placeholder='Imagen' required /><br>
+                    <input type='text' name='nombrecerveza' placeholder='Nombre' required />Pon la marca<br>
+                    <input type='text' name='modelo' placeholder='Modelo' required />Di el modelo<br>
+                    <input type='text' name='graduacion' placeholder='Graduación' required />Grados que lleva<br>
+                    <input type='text' name='imagen' placeholder='Imagen' required />¡Ilústranos!<br>
                     <hr />
-                    <input type='text' name='direccion' placeholder='Dirección' required /><br>
-                    <input type='text' name='ciudad' placeholder='Ciudad' required /><br>
-                    <input type='text' name='precio' placeholder='Precio' required /><br>
-                    <input type='text' name='local' placeholder='Nombre del establecimiento' required /><br>
+                    <input type='text' name='direccion' placeholder='Dirección' required />Pon la dirección<br>
+                    <input type='text' name='local' placeholder='Nombre del establecimiento' required />¿Aca donde?<br>
+                    <input type='text' name='ciudad' placeholder='Ciudad' required />Ciudad<br>
+                    <input type='text' name='precio' placeholder='Precio' required />Di lo que vale<br>
+                    <br>
                     <input type='submit' value='Enviar' name='enviaBirra' />
         </form>
         </div>
+        
+         <div class="col-3 formuValora">
+            <div class="valoraTitulo">
+               Coméntala y Valórala
+            </div>
+           <hr/>
+        <form name='formuValora' id='formuValora' method='post' action='enviaValora.php'>
+                    <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Pon la marca<br>
+                    <input type='text' name='comentario' placeholder='Comenta aquí' required />Di el modelo<br>
+                    <input type='submit' value='Enviar' name='enviaBirra' />
+        </form>
+        </div>
+        
     </body>
 </html>

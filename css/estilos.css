@@ -45,6 +45,7 @@ and open the template in the editor.
 }
 body{
     background-image: url('../images/beer-pattern2.jpg');
+      
 }
 
 .formuLogin{
@@ -71,7 +72,7 @@ body{
 
 .formuCervezas{
     font-size: 1.5em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
     float: left;
@@ -84,7 +85,7 @@ body{
 }
 .formuEstablecimientos{
     font-size: 1.5em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
     float: right;
@@ -93,6 +94,15 @@ body{
 }
 .estableciTitulo{
     font-family: 'docktrin';
+}
+
+.formuValora{
+    font-size: 1.5em;
+    font-family: 'docktrin';
+    border: solid 4px;
+    border-radius: 15px;
+    margin-top: 5%;
+    
 }
 
 .cerrar {
