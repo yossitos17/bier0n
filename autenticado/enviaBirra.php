@@ -23,11 +23,9 @@
              
              $sql="insert into cervezas (nombre, modelo, graduacion, imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas");
+   
              
-
-             // Aquí habías puesto LOCAL en lugar de NOMBREESTABLECIMIENTO.
-             // Deberías cambiarle el nombre a DIRECCIÓN por DIRECCION sin tilde
-             // para evitar problemas.
+             
              $sql="insert into establecimientos (dirección, ciudad, precio, nombreestablecimiento) "
                      . "values ('$direccion','$ciudad','$precio','$local');";
              mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos");
