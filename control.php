@@ -38,7 +38,7 @@ if(isset($_POST['autenticar'])){
         
         
         // Devolvemos al usuario a la página de inicio.
-       header("Location: autenticado/perfil.php");
+       header("Location: autenticado/nuevaBirra.php");
        
     }else{
     

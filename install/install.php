@@ -43,7 +43,7 @@ and open the template in the editor.
 
                  //1 Consulta SQL que crea la tabla de usuarios.
                 $sql = "CREATE TABLE if not exists usuarios (
-                login VARCHAR(30) NOT NULL,
+                login VARCHAR(40) NOT NULL,
                 password VARCHAR(300) NOT NULL,
                 edad INT(2) NOT NULL,
                 sexo SET('Hombre','Mujer') NOT NULL,
@@ -75,10 +75,10 @@ and open the template in the editor.
                   //3 Consulta SQL que crea la tabla de establecimientos.
                 $sql = "CREATE TABLE if not exists establecimientos (
                 idestablecimientos INT(20) NOT NULL AUTO_INCREMENT,
+                nombreestablecimiento INT (40) NOT NULL,
                 direccion VARCHAR(30) NOT NULL,
                 ciudad VARCHAR(30),
                 precio INT(40) NOT NULL,
-                nombreestablecimiento INT (40) NOT NULL,
                 PRIMARY KEY (idestablecimientos)
                   )  ENGINE=InnoDB;";    
                 mysqli_query($conex, $sql) or die("Error al crear la tabla establecimientos:.".mysqli_error($conex));
@@ -90,10 +90,9 @@ and open the template in the editor.
                    //4 Consulta SQL que crea la tabla de valoración.
                 $sql = "CREATE TABLE if not exists valoracion (
                 idcervezas INT(20) NOT NULL,
-                login VARCHAR(20) NOT NULL,
+                login VARCHAR(40) NOT NULL,
                 puntuacion INT(2) NOT NULL,
                 comentario VARCHAR(1000) NOT NULL,
-                fechasubida TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (idcervezas) REFERENCES cervezas(idcervezas),
                 FOREIGN KEY (login) REFERENCES usuarios(login),
                 PRIMARY KEY (idcervezas, login)

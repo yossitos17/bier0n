@@ -1,17 +1,8 @@
-          <?php
-        
-        // Incluir funciones.php y control.php
-        include_once '../funciones.php';
-        include_once '../control.php';
-        
-        // Inicia la sesión.
-        session_start();
-       
-       //Aquí comprueba la seguridad que está en funciones.php
-        seguridad("Registrado");
-        
-       ?>
-        
+<!DOCTYPE html>
+<!--
+Bier0n es una aplicación web sobre cerveza.
+Copyright (C) 2016  José María Rodríguez Toledo.
+-->
 
 <html>
     <head>
@@ -22,8 +13,19 @@
     </head>
     <body onload='cambiaFrase();'>
         
+        <?php
+        
+        // Incluir funciones.php y control.php
+        include_once '../funciones.php';
+        include_once '../control.php';
+        
+        // Inicia la sesión (en funciones.php)
+        session_start();
+        
+        ?>
         
         <!--Llamada a la cabecera-->
+        
         <div class='col-12 cabecera'>
           <?php cabecera(); ?>
         </div>
@@ -33,14 +35,15 @@
             <div class="col-12 menu">
                 <ul>
                     <li><a href='../index.php'>Inicio</a></li>
-                    <li><a href='/perfil.php'>Mi Perfil</a></li>
-                    <li><a href='autenticado/misBirras.php'>Birras Subidas</a></li>
-                    <li><a href="about.php">Sobre bier0n</a></li>
-                    <li><a href="contacto.php">Contacto</a></li>
-                    <li><a href="topTen.php">Todas las cervezas</a></li>
-                    <li><a href="/cerrar.php">Cerrar sesión</a></li>
+                    <li><a href='nuevaBirra.php'>Subir Birras</a></li>
+                    <li><a href='misBirras.php'>Mis Birras</a></li>
+                    <li><a href='topTen.php'>Mejor Valoradas</a></li>
+                    <li><a href="../about.php">Sobre bier0n</a></li>
+                    <li><a href="valoraOtras">¡Juzga!</a></li>
+                    <li><a href="cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
+
        
         <div class="col-3 formuCervezas">
             <div class="cerveTitulo">
@@ -58,7 +61,7 @@
                     <input type='text' name='ciudad' placeholder='Ciudad' required />Ciudad<br>
                     <input type='text' name='precio' placeholder='Precio' required />Di lo que vale<br>
                     <br>
-                    <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Pon la marca<br>
+                    <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Puntúa<br>
                     <textarea name="comentario" placeholder="Comenta aquí tu vaina" rows="15" cols="30"></textarea>
                     <input type='submit' value='Enviar' name='enviaBirra' />
         </form>
