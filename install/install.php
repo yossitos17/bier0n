@@ -95,7 +95,8 @@ and open the template in the editor.
                 comentario VARCHAR(1000) NOT NULL,
                 FOREIGN KEY (idcervezas) REFERENCES cervezas(idcervezas),
                 FOREIGN KEY (login) REFERENCES usuarios(login),
-                PRIMARY KEY (idcervezas, login)
+                PRIMARY KEY (idcervezas, login),
+                CONSTRAINT comprobar CHECK (puntuacion between 0 and 10)
                   )  ENGINE=InnoDB;";    
                 mysqli_query($conex, $sql) or die("Error al crear la tabla valoración.".mysqli_error($conex));
                

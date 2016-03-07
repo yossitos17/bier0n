@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <!--
 Bier0n es una aplicación web sobre cerveza.
-Copyright (C) 2016  Piticlis Productions.
+Copyright (C) 2016  José María Rodríguez Toledo.
 -->
 
 <html>
@@ -13,7 +14,7 @@ Copyright (C) 2016  Piticlis Productions.
     </head>
     <body onload='cambiaFrase();'>
         
-         <?php
+        <?php
         
         // Incluir funciones.php y control.php
         include_once 'funciones.php';
@@ -21,9 +22,7 @@ Copyright (C) 2016  Piticlis Productions.
         
         // Inicia la sesión (en funciones.php)
         session_start();
-        
-        // El Login (en funciones.php)
-        cuadroLogin();
+       
         ?>
         
         <!--Llamada a la cabecera-->
@@ -37,18 +36,17 @@ Copyright (C) 2016  Piticlis Productions.
             <div class="col-12 menu">
                 <ul>
                     <li><a href='index.php'>Inicio</a></li>
-                    <li><a href='autenticado/perfil.php'>Subir Cervezas</a></li>
-                    <li><a href='autenticado/misBirras.php'>Birras Subidas</a></li>
+                    <li><a href='autenticado/nuevaBirra.php'>Subir Birras</a></li>
+                    <li><a href='autenticado/topTen.php'>Mejor Valoradas</a></li>
                     <li><a href="about.php">Sobre bier0n</a></li>
-                    <li><a href="contacto.php">Contacto</a></li> 
+                    <li><a href="autenticado/valoraOtras"></a>Juzga</li>
                     <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
-        Bienvenido infraser:
+         Bienvenido infraser:
         
         Bier0n es un proyecto web desarrollado por Piticlis Productions con el fin de crear un espacio donde sus propios usuarios puedan indicar diferentes tipos de cerveza (dando los datos de la misma), donde se puede adquirir y entrar a valorar tanto las que ellos indican como otras ya indicadas anteriormente.
         
         El reponsable de la aplicación no se hace responsable del uso indebido de la misma.
-        
     </body>
 </html>

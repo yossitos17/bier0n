@@ -38,10 +38,9 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                 <ul>
                     <li><a href='index.php'>Inicio</a></li>
                     <li><a href='autenticado/nuevaBirra.php'>Subir Birras</a></li>
-                    <li><a href='autenticado/misBirras.php'>Tus Birras</a></li>
                     <li><a href='autenticado/topTen.php'>Mejor Valoradas</a></li>
                     <li><a href="about.php">Sobre bier0n</a></li>
-                    <li><a href="autenticado/valoraOtras">¡Juzga!</a></li>
+                    <li><a href="autenticado/valoraOtras.php">¡Juzga!</a></li>
                     <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
