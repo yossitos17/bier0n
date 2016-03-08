@@ -10,6 +10,28 @@ Copyright (C) 2016  Piticlis Productions.
         <title>Bier0n | Versión de pruebas</title>
         <link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
         <script type="text/javascript" src="../js/javascript.js"></script>
+        <script src="../js/jquery-2.2.0.min.js"></script>
+        <script> 
+            function mandar(cerveza){
+                var puntuacion=document.getElementById(cerveza).value;
+                $.ajax({
+                     url: 'valorarBirras.php',  
+                        type: 'GET',
+                        data:{puntuacion:puntuacion , idcervezas: cerveza},
+         
+           
+            success: function(data){
+                        $('#media'+cerveza).html(data);
+                        //media.innerHTML=data;
+                        alert(data);
+            },
+            //si ha ocurrido un error
+            error: function(){
+				 alert('Error en valoracion');
+            }
+        });
+            }
+        </script>
     </head>
     <body onload='cambiaFrase();'>
         
@@ -47,7 +69,6 @@ Copyright (C) 2016  Piticlis Productions.
                     <li><a href='nuevaBirra.php'>Subir Birras</a></li>
                     <li><a href='topTen.php'>Mejor Valoradas</a></li>
                     <li><a href="../about.php">Sobre bier0n</a></li>
-                    <li><a href="valoraOtras.php">¡Juzga!</a></li>
                     <li><a href="cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
@@ -62,14 +83,14 @@ Copyright (C) 2016  Piticlis Productions.
             $sqlCervezas="SELECT *, AVG(puntuacion) as media"
                     . " FROM cervezas, valoracion"
                     . " WHERE cervezas.idcervezas = valoracion.idcervezas"
-                    . " ORDER BY AVG(puntuacion)"
-                    . " LIMIT 10;";
+                    . " GROUP BY cervezas.idcervezas;";
             
             $resultadoCervezas=mysqli_query($conexion, $sqlCervezas) or die (mysqli_error($conexion)); 
             //$sqlEstablecimientos="select * from establecimientos limit 10;";
             //$resultadoEstablecimientos=  mysqli_query($conexion,$sqlestablecimientos);
             while($filasCervezas=mysqli_fetch_array($resultadoCervezas,MYSQLI_ASSOC)){ 
-                echo "<tr><td>$filasCervezas[nombre]</td><td>$filasCervezas[modelo]</td><td>$filasCervezas[graduacion]</td><td>$filasCervezas[media]</td><td><input type='text' pattern='\d\d'/></td><td><button>valora</button></td></tr>";
+                echo "<tr><td>$filasCervezas[nombre]</td><td>$filasCervezas[modelo]</td><td>$filasCervezas[graduacion]</td><td id='media$filaCervezas[idcervezas]'>$filasCervezas[media]</td>"
+                        . "<td><input id='$filasCervezas[idcervezas]' type='text' pattern='\d\d'/></td><td><button onclick='mandar( \"$filasCervezas[idcervezas]\");'>valora</button></td></tr>";
             }
                 echo"</table>";
             ?>
