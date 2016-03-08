@@ -44,5 +44,12 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                 </ul>
             </div>
         
+         <div class="piePagina">
+            <?php
+                // Pie de página.
+                piePagina();
+            ?>
+        </div>
+        
     </body>
 </html>

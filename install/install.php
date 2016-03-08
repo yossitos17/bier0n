@@ -126,5 +126,12 @@ and open the template in the editor.
                  
         ?>
         
+        <div class="piePagina">
+            <?php
+                // Pie de página.
+                piePagina();
+            ?>
+        </div>
+        
     </body>
 </html>

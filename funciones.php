@@ -27,6 +27,15 @@ function cuadroLogin(){
                     <p>¿No estás registrado? <a href='Registro.php'>Regístrate ahora, ¡infraser!.</a></p>
                 </form>
             </div>";  
+    }else{
+        
+        echo "<div class='avisoSesion'>
+        
+            Cierra sesión para entrar con otro usuario 
+        
+            </div>";
+        
+    
     }
     
 }
@@ -60,5 +69,11 @@ function seguridad($rol){
       header("Location: index.php?error=No estás autenticado.");
       exit();
   }
+}
+
+function piePagina(){
+    echo "Bier0n es software libre para que te hartes con él.
+            En caso de duda puedes acudir a yoss_ff8@hotmail.com";
+    
 }
 ?>

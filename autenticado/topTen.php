@@ -94,5 +94,13 @@ Copyright (C) 2016  Piticlis Productions.
             }
                 echo"</table>";
             ?>
+            
+            <div class="piePagina">
+            <?php
+                // Pie de página.
+                piePagina();
+            ?>
+             </div>
+            
     </body>
 </html>

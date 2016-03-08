@@ -40,7 +40,7 @@
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a Valoración".  mysqli_error($conexion).$sql);
              
              
-             header("Location: /misBirras.php");
+             header("Location: ./topTen.php");
         }
         
         ?>

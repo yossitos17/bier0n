@@ -42,10 +42,21 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                     <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
+        <div class="about">
          Bienvenido infraser:
         
         Bier0n es un proyecto web desarrollado por Piticlis Productions con el fin de crear un espacio donde sus propios usuarios puedan indicar diferentes tipos de cerveza (dando los datos de la misma), donde se puede adquirir y entrar a valorar tanto las que ellos indican como otras ya indicadas anteriormente.
         
         El reponsable de la aplicación no se hace responsable del uso indebido de la misma.
+        
+        </div>
+        
+        <div class="piePagina">
+            <?php
+                // Pie de página.
+                piePagina();
+            ?>
+        </div>
+        
     </body>
 </html>

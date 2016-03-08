@@ -63,5 +63,13 @@ if(isset($_POST['registrar'])){
             <input type="submit" name="registrar" value="Registrarse" />
           </form>
       </div>  
+      
+      <div class="piePagina">
+            <?php
+                // Pie de página.
+                piePagina();
+            ?>
+        </div>
+      
   </body>
 </html>

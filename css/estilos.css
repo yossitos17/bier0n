@@ -116,7 +116,7 @@ body{
 /* Aquí va todo el menú para moverse*/
 
 .menu{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'docktrin';
     background: #424242;
     margin: 0;
     padding: 0;
@@ -172,4 +172,22 @@ body{
   color: #009ae1;
   background-color: white;
   transition: color .2s ease;
+}
+
+.piePagina{
+    position: absolute;
+    font-family: 'docktrin';
+    bottom: 2%;
+    font-size: 1em;
+    right: 10%;
+}
+
+.avisoSesion{
+    
+    position: absolute;
+    font-family: 'docktrin';
+    bottom: 2%;
+    font-size: 1em;
+    right: 10%;
+    
 }
