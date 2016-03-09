@@ -63,7 +63,6 @@ and open the template in the editor.
                 nombre VARCHAR(30) NOT NULL,
                 modelo VARCHAR (40) NOT NULL,
                 graduacion INT(3) NOT NULL,
-                imagen VARCHAR(300) NOT NULL,
                  PRIMARY KEY (idcervezas)
                )  ENGINE=InnoDB;";    
                mysqli_query($conex, $sql) or die("Error al crear la tabla cervezas.".mysqli_error($conex));
@@ -75,10 +74,10 @@ and open the template in the editor.
                   //3 Consulta SQL que crea la tabla de establecimientos.
                 $sql = "CREATE TABLE if not exists establecimientos (
                 idestablecimientos INT(20) NOT NULL AUTO_INCREMENT,
-                nombreestablecimiento INT (40) NOT NULL,
+                nombreestablecimiento VARCHAR(40) NOT NULL,
                 direccion VARCHAR(30) NOT NULL,
                 ciudad VARCHAR(30),
-                precio INT(40) NOT NULL,
+                precio FLOAT(1) NOT NULL,
                 PRIMARY KEY (idestablecimientos)
                   )  ENGINE=InnoDB;";    
                 mysqli_query($conex, $sql) or die("Error al crear la tabla establecimientos:.".mysqli_error($conex));

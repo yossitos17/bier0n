@@ -74,7 +74,7 @@ Copyright (C) 2016  Piticlis Productions.
             </div>
        
         <table class="col-12 tablaTop">
-            <tr><th>Nombre</th><th>Modelo</th><th>Graduación</th><th>Establecimiento</th><th>Dirección</th><th></th><th>Precio (€)</th><th>Media</th></tr>
+            <tr class="cabeceratabla"><th>Nombreeeee</th><th>Modelo</th><th>Graduación</th><th>Establecimiento</th><th>Dirección</th><th>Ciudad</th><th>Precio</th><th>Puntuación</th></tr>
             
             <?php
             

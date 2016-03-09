@@ -31,7 +31,7 @@ function cuadroLogin(){
         
         echo "<div class='avisoSesion'>
         
-            Cierra sesión para entrar con otro usuario 
+            Cierra Sesión para entrar con otro usuario 
         
             </div>";
         

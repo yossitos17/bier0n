@@ -15,21 +15,20 @@
              $nombrecerveza=$_POST['nombrecerveza'];
              $modelo=$_POST['modelo'];
              $graduacion=$_POST['graduacion'];
-             $imagen=$_POST['imagen'];
              $direccion=$_POST['direccion'];
              $ciudad=$_POST['ciudad'];
              $precio=$_POST['precio'];
-             $local=$_POST['local'];
+             $nombreestablecimiento=$_POST['nombrelocal'];
              $puntuacion=$_POST['puntuacion'];
              $comentario=$_POST['comentario'];
              
-             $sql="insert into cervezas (nombre, modelo, graduacion, imagen) values ('$nombrecerveza','$modelo','$graduacion','$imagen');";
+             $sql="insert into cervezas (nombre, modelo, graduacion) values ('$nombrecerveza','$modelo','$graduacion');";
              mysqli_query($conexion, $sql) or die ("No ha podido mandar nada a cervezas".  mysqli_error($conexion));
    
              $id_ultimaCerveza=mysqli_insert_id($conexion);
              
-             $sql="insert into establecimientos (direccion, ciudad, precio, nombreestablecimiento) "
-                     . "values ('$direccion','$local','$ciudad','$precio');";
+             $sql="insert into establecimientos (direccion, nombreestablecimiento, ciudad, precio) "
+                     . "values ('$direccion','$nombreestablecimiento','$ciudad','$precio');";
              mysqli_query($conexion, $sql) or die ("No se ha podido mandar nada a establecimientos".  mysqli_error($conexion));
              $id_ultimoEstablecimiento=mysqli_insert_id($conexion);
             

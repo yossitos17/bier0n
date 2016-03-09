@@ -38,7 +38,19 @@ if(isset($_POST['registrar'])){
            <?php cabecera(); ?>
         </div>
       <hr />
-      <div class="col-5 formuRegistro">
+      
+      <!— Menú —>
+            <div class="col-12 menu">
+                <ul>
+                    <li><a href='index.php'>Inicio</a></li>
+                    <li><a href='autenticado/nuevaBirra.php'>Subir Birras</a></li>
+                    <li><a href='autenticado/topTen.php'>Mejor Valoradas</a></li>
+                    <li><a href="about.php">Sobre bier0n</a></li>
+                    <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
+                </ul>
+            </div>
+      
+      <div class="col-4 formuRegistro">
           Regístrate y no protestes
           <form name="registro_form" id="formularioRegistro" method="POST" action="" onsubmit="return registro();">
             <input type="text" name="login" placeholder="Correo Electrónico" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/> Ej: bacalao@contomate.com<br>
@@ -56,10 +68,8 @@ if(isset($_POST['registrar'])){
                 <br>
             <input type="radio" name="edad" value="46-59"> 46-59
                 <br>
-            <input type="radio" name="edad" value="60+"> +60
-                <br>
-                <br>
-            <br /><br/>
+            <input type="radio" name="edad" value="60+"> +60     
+            <br />
             <input type="submit" name="registrar" value="Registrarse" />
           </form>
       </div>  

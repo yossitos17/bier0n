@@ -61,13 +61,14 @@ body{
 
 
 .formuRegistro{
-    font-size: 1.5em;
+    
+    font-size: 1.25em;
+    position: absolute;
     font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
-    position: absolute;
-    right: 10%;
-    top: 15%; 
+    top: 20%;
+    right: 35%;
 }
 
 .formuCervezas{
@@ -76,7 +77,7 @@ body{
     font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
-    top: 17%;
+    top: 20%;
     right: 40%;
    
     
@@ -164,18 +165,19 @@ body{
 .piePagina{
     position: absolute;
     font-family: 'docktrin';
-    bottom: 2%;
+    bottom: 1%;
     font-size: 1em;
     right: 10%;
 }
 
 .avisoSesion{
     
-    position: absolute;
+    border: solid 4px;
+    border-radius: 15px;
+    margin: 10%;
+    padding: 10%;
     font-family: 'docktrin';
-    bottom: 2%;
-    font-size: 1em;
-    right: 10%;
+    font-size: 1.25em;
     
 }
 
@@ -186,5 +188,18 @@ body{
     font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
-   
+    top: 20%;
+    text-align: center;
+}
+.cabeceratabla {
+    border-bottom: solid 4px;
+}
+
+.about{
+    border: solid 4px;
+    border-radius: 15px;
+    margin: 10%;
+    padding: 10%;
+    font-family: 'docktrin';
+    font-size: 1.25em;
 }

@@ -21,9 +21,7 @@ Copyright (C) 2016  José María Rodríguez Toledo.
         
         // Inicia la sesión (en funciones.php)
         session_start();
-        
-        // El Login (en funciones.php)
-        cuadroLogin();
+      
         ?>
         
         <!--Llamada a la cabecera-->
@@ -43,6 +41,12 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                     <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
+        <?php   
+        
+        // El Login (en funciones.php)
+               
+             cuadroLogin();
+        ?>
         
          <div class="piePagina">
             <?php

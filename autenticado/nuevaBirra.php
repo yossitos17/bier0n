@@ -42,7 +42,6 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                 </ul>
             </div>
 
-       
         <div class="col-3 formuCervezas">
             <div class="cerveTitulo">
                Vamos a ver, ¿Qué birra es y donde la pillas?
@@ -52,19 +51,17 @@ Copyright (C) 2016  José María Rodríguez Toledo.
                     <input type='text' name='nombrecerveza' placeholder='Nombre' required />Marca<br>
                     <input type='text' name='modelo' placeholder='Modelo' required />Modelo<br>
                     <input type='text' name='graduacion' placeholder='Graduación' required />Graduación (solo dígitos)<br>
-                    <input type='text' name='imagen' placeholder='Imagen' required />URL Imagen<br>
                     <hr />
                     <input type='text' name='direccion' placeholder='Dirección' required />Dirección<br>
-                    <input type='text' name='local' placeholder='Nombre del establecimiento' required />Establecimiento<br>
+                    <input type='text' name='nombrelocal' placeholder='Nombre del establecimiento' required />Establecimiento<br>
                     <input type='text' name='ciudad' placeholder='Ciudad' required />Ciudad<br>
                     <input type='text' name='precio' placeholder='Precio' required />€<br>
                     <br>
-                    <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Puntúala<br>
-                    <textarea name="comentario" placeholder="Deja aquí tu comentario" rows="15" cols="30"></textarea>
+                    <input type='text' name='puntuacion' placeholder='Puntua aquí' required />Puntúala (de 10 a 99)<br>
+                    <textarea name="comentario" placeholder="Deja aquí tu comentario" rows="10" cols="35"></textarea>
                     <input type='submit' value='Enviar' name='enviaBirra' />
         </form>
         </div>
-        
        <div class="piePagina">
             <?php
                 // Pie de página.
