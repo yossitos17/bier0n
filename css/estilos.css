@@ -71,39 +71,26 @@ body{
 }
 
 .formuCervezas{
-    font-size: 1.5em;
+    font-size: 1.25em;
+    position: absolute;
     font-family: 'docktrin';
     border: solid 4px;
     border-radius: 15px;
-    float: left;
-    margin-top: 5%;
+    top: 17%;
+    right: 40%;
+   
     
 }
 
 .cerveTitulo{
     font-family: 'docktrin';
 }
-.formuEstablecimientos{
-    font-size: 1.5em;
-    font-family: 'docktrin';
-    border: solid 4px;
-    border-radius: 15px;
-    float: right;
-    margin-top: 5%;
- 
-}
+
 .estableciTitulo{
     font-family: 'docktrin';
 }
 
-.formuValora{
-    font-size: 1.5em;
-    font-family: 'docktrin';
-    border: solid 4px;
-    border-radius: 15px;
-    margin-top: 5%;
-    
-}
+
 
 .cerrar {
     font-family: 'docktrin';
@@ -190,4 +177,14 @@ body{
     font-size: 1em;
     right: 10%;
     
+}
+
+.tablaTop{
+    
+    font-size: 1.25em;
+    position: absolute;
+    font-family: 'docktrin';
+    border: solid 4px;
+    border-radius: 15px;
+   
 }

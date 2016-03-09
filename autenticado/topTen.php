@@ -72,28 +72,30 @@ Copyright (C) 2016  Piticlis Productions.
                     <li><a href="cerrar.php">Cerrar sesión</a></li>
                 </ul>
             </div>
-        
-        <table>
-            <tr><th>Nombre</th><th>Modelo</th><th>Graduación</th><th>Media</th></tr>
+       
+        <table class="col-12 tablaTop">
+            <tr><th>Nombre</th><th>Modelo</th><th>Graduación</th><th>Establecimiento</th><th>Dirección</th><th></th><th>Precio (€)</th><th>Media</th></tr>
             
             <?php
             
            //Selecciona de cada tabla lo que necesito y luego se manda en forma de tabla creando variables con $
          
-            $sqlCervezas="SELECT *, AVG(puntuacion) as media"
-                    . " FROM cervezas, valoracion"
-                    . " WHERE cervezas.idcervezas = valoracion.idcervezas"
-                    . " GROUP BY cervezas.idcervezas;";
-            
+            $sqlCervezas="SELECT AVG(D.puntuacion) as media, A.*, B.*, C.* FROM cervezas A 
+                          INNER JOIN cervezasestablecimientos B ON A.idcervezas = B.idcervezas
+                          INNER JOIN establecimientos C ON B.idestablecimientos = C.idestablecimientos
+                          INNER JOIN valoracion D ON A.idcervezas = D.idcervezas
+                          GROUP BY A.idcervezas, C.idestablecimientos
+                          Order BY media DESC";
+           
             $resultadoCervezas=mysqli_query($conexion, $sqlCervezas) or die (mysqli_error($conexion)); 
-            //$sqlEstablecimientos="select * from establecimientos limit 10;";
-            //$resultadoEstablecimientos=  mysqli_query($conexion,$sqlestablecimientos);
             while($filasCervezas=mysqli_fetch_array($resultadoCervezas,MYSQLI_ASSOC)){ 
-                echo "<tr><td>$filasCervezas[nombre]</td><td>$filasCervezas[modelo]</td><td>$filasCervezas[graduacion]</td><td id='media$filaCervezas[idcervezas]'>$filasCervezas[media]</td>"
+                echo "<tr><td>$filasCervezas[nombre]</td><td>$filasCervezas[modelo]</td><td>$filasCervezas[graduacion]</td><td>$filasCervezas[nombreestablecimiento]</td><td>$filasCervezas[direccion]</td><td>$filasCervezas[ciudad]</td><td>$filasCervezas[precio]</td><td id='media$filaCervezas[idcervezas]'>$filasCervezas[media]</td>"
                         . "<td><input id='$filasCervezas[idcervezas]' type='text' pattern='\d\d'/></td><td><button onclick='mandar( \"$filasCervezas[idcervezas]\");'>valora</button></td></tr>";
             }
                 echo"</table>";
+                
             ?>
+            
             
             <div class="piePagina">
             <?php
