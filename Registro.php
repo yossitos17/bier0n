@@ -23,14 +23,18 @@ if(isset($_POST['registrar'])){
     }
 ?>
 
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/estilos.css" type="text/css"/> 
-    <script type="text/javascript" src="./js/javascript.js"></script>
-    <title>Registro</title>
-  </head>
+<head>
+        <meta charset="UTF-8">
+        <title>Bier0n | Versión de pruebas</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/bootstrap-theme.min.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/estilos.css" type="text/css"/>
+        <script type="text/javascript" src="../js/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="../js/javascript.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+</head>
   <body onload='cambiaFrase();'>
+      <div class="container">
       
     <?php include_once 'funciones.php'; ?>
       
@@ -39,16 +43,23 @@ if(isset($_POST['registrar'])){
         </div>
       <hr />
       
-      <!— Menú —>
-            <div class="col-12 menu">
-                <ul>
-                    <li><a href='index.php'>Inicio</a></li>
-                    <li><a href='autenticado/nuevaBirra.php'>Subir Birras</a></li>
-                    <li><a href='autenticado/topTen.php'>Mejor Valoradas</a></li>
-                    <li><a href="about.php">Sobre bier0n</a></li>
-                    <li><a href="autenticado/cerrar.php">Cerrar sesión</a></li>
-                </ul>
-            </div>
+        <!— Menú —>
+        <div class="row fondo">   
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.php"><?php cabecera(); ?></a>
+                </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href='../autenticado/nuevaBirra.php'>Subir Birras</a></li>
+                        <li><a href='../autenticado/topTen.php'>Mejor Valoradas</a></li>
+                        <li><a href="../about.php">Sobre bier0n</a></li>
+                        <li><a href="../autenticado/cerrar.php">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div> 
+        
       
       <div class="col-4 formuRegistro">
           Regístrate y no protestes
@@ -80,6 +91,6 @@ if(isset($_POST['registrar'])){
                 piePagina();
             ?>
         </div>
-      
+      </div>
   </body>
 </html>

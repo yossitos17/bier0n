@@ -8,28 +8,6 @@ and open the template in the editor.
     Author     : usuario
 */
 
-/* Móviles: */
-[class*="col-"] {
-    width: 100%;
-    float: left;
-    padding: 15px;
-    display: block;
-}
-/* Ordenadores: */
-@media only screen and (min-width: 768px) {
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
 
 @font-face {
   font-family: docktrin;
@@ -39,25 +17,15 @@ and open the template in the editor.
 .cabecera{
     font-family: 'docktrin';
     font-size: 3em;
-    display: block;
-    
-    
+    display: block;    
 }
 body{
-    background-image: url('../images/beer-pattern2.jpg');
-      
+    background-image: url('../images/wood.jpg');   
 }
 
-.formuLogin{
-    font-size: 1.5em;
+.navbar{
     font-family: 'docktrin';
-    border: solid 4px;
-    border-radius: 15px;
-    position: absolute;
-    right: 5%;
-    top: 35%;
 }
-
 
 
 .formuRegistro{
@@ -103,64 +71,7 @@ body{
 
 /* Aquí va todo el menú para moverse*/
 
-.menu{
-    font-family: 'docktrin';
-    background: #424242;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
-    line-height: 1;
-    display: block;
-    position: relative;
-    border-radius: 2px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    align-content: center;
-}
-.menu > ul {
-    margin-left: 20%;
-    margin-right: 20%;
-}
-.menu > ul:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-.menu > ul > li{
-    float: left;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
-    line-height: 1;
-    display: block;
-    position: relative;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-.menu > ul > li > a{
-    padding: 20px;
-    color: white;
-    font-size: .9em;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transition: color .2s ease;
-    -moz-transition: color .2s ease;
-    -ms-transition: color .2s ease;
-    -o-transition: color .2s ease;
-    transition: color .2s ease;
-}
-.menu > ul > li:hover > a,
-.menu > ul > li.active > a{
-  color: #009ae1;
-  background-color: white;
-  transition: color .2s ease;
-}
+
 
 .piePagina{
     position: absolute;
@@ -202,4 +113,13 @@ body{
     padding: 10%;
     font-family: 'docktrin';
     font-size: 1.25em;
+}
+
+.panel, .panel-default, .panel-footer{
+    opacity: 0.85;
+    background-color: #AB9E8F;
+}
+
+.panel-heading{
+     background-color: #AB9E8F;
 }
